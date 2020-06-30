@@ -9,7 +9,7 @@ private static Scanner ler;
 // através do método "read" do pacote de classes System.in
   public static void main(String[] args) throws IOException  {
 ler = new Scanner(System.in);
- 
+ 	int idade;
     String nome;
     char sexo;
  
@@ -19,9 +19,14 @@ ler = new Scanner(System.in);
     System.out.printf("\nInforme o sexo (M/F): ");
 // 3.7 entrada de dados (lendo um caractere)
     sexo = (char)System.in.read();
- 
+    
+// 3.6 entrada de dados (lendo um inteiro)
+   System.out.println("Informe a sua idade: ");
+   idade = ler.nextInt();
+   
+    
     System.out.printf("\nResultado:\n");
-    if ((sexo == 'M') || (sexo == 'm'))
+    if ((sexo == 'M') || (sexo == 'm') || (idade >=18))
        System.out.printf("Seja bem vindo Sr. \"%s\".\n", nome);
     else System.out.printf("Seja bem vinda Sra. \"%s\".\n", nome);
   }
